@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/styleLogin.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>BEM VINDO</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div data-aos="flip-right" data-aos-duration="2000" class="videoapresentacao">
+            <video src="./src/Assetes/Vídeo sem título ‐ Feito com o Clipchamp (6).mp4" autoplay muted loop></video>
+            <p> <b>ELIZA FLOWER</b> <br>
+                Tem o melhor em flores,rosas e orquídeas,somos especialistas em BUQUÊS DE FLORES E ROSAS, e estamos
+                prontos para tornar o seu dia mais especial.
+            </p>
+            <button id="btnGenerator">Mude o seu Ambiente</button>
+        </div>
+        <div class="boxlogin" data-aos="flip-right" data-aos-duration="2000">
+            <div class="logo">ELIZA FLOWER</div>
+            <h1 class="title">Faça o seu Longin</h1>
+            <form action="javascript:;" method="post"> <input type="email" name="email" placeholder="Seu E-mail">
+                <input type="password" name="password" placeholder="Sua Senha">
+                <a class="logar" href="./index.eCommerce.htm" type="submit">Entrar</a>
+                <div class="divisao"></div>
+                <a class="conta" href="#" title="criar uma conta">Criar uma conta</a>
+                <ul>
+                    <li> <a class="icone" href="#"> <img src="./src/Assetes/simbolo-do-google.png"
+                                alt="icone goole"></a>
+                    </li>
+                    <li> <a class="icone" href="#"><img src="./src/Assetes/logo-do-facebook.png"
+                                alt="icone facebook"></a></li>
+                </ul>
+            </form>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./scriptLogin.js"></script>
+</body>
+
+</html>

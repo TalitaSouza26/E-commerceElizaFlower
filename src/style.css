@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poiret One', cursive;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+a {
+  color: #af7990;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a:hover {
+  opacity: 0.7;
+
+}
+
+
+.logo {
+  text-align: end;
+  font-size: 3rem;
+  background: linear-gradient(45deg, #964c6a, #f81b86, #5d0135, #340836);
+  background-size: 400% 100%;
+  animation: degrade 10s linear infinite alternate;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+
+}
+
+@keyframes degrade {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e4d5d5fc;
+  height: 8vh;
+  padding: 45px;
+
+}
+
+
+
+
+.navLinks {
+  list-style: none;
+  display: flex;
+
+}
+
+.navLinks li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+
+}
+
+.icons a {
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer
+}
+
+.hover-word {
+  display: none;
+}
+
+.icones:hover .hover-word {
+  display: inline;
+  font-size: 18px;
+  color: #340836;
+  padding: 5px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.icons {
+  margin-left: 100px;
+
+}
+
+.menuMobile {
+  cursor: pointer;
+  display: none;
+}
+
+.menuMobile div {
+  width: 32px;
+  height: 2px;
+  background: rgb(72, 64, 64);
+  margin: 8px;
+}
+
+.pages {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+
+}
+
+
+.page1 {
+  background-color: #d68cb0;
+}
+
+.page2 {
+  background-color: #340836;
+}
+
+.page3 {
+  background-color: #964c6a;
+}
+
+.page4 {
+  background-color: darkorchid;
+}
+
+.page5 {
+  background-color: #5b1835;
+}
+
+@media (max-width:999px) {
+
+
+
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 50px;
+    background-image: url(./Assetes/20230921020727_[fpdl.in]_hand-holding-elegant-flower_23-2149376504_normal.jpg);
+    background-color: rgb(248, 246, 247);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    z-index: 1;
+    width: 100%;
+
+  }
+
+  .navLlinks li {
+    opacity: 0;
+  }
+
+  .navLinks a {
+    color: #4d1b2f;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-weight: 800;
+    background-color: rgb(248, 246, 247, .40);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
+  .namelink {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .menuMobile {
+    display: block;
+
+  }
+
+  .navLinks.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    justify-content: start;
+
+  }
+
+  .logo {
+    font-size: 30px;
+
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+
+  }
+
+  .icons a {
+    font-size: 30px;
+    letter-spacing: 10px;
+
+  }
+
+}

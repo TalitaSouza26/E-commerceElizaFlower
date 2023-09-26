@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: 'Martel Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #986d6dfc 50%, #e4d5d5fc 50%);
+    overflow: hidden;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.videoapresentacao {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 58px;
+    margin-top: 75px;
+
+}
+
+.videoapresentacao video {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #4c1224;
+}
+
+.videoapresentacao p {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'Poiret One', cursive;
+    color: #ffffff;
+}
+
+.boxlogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.993);
+    text-align: center;
+    padding: 50px;
+    margin-top: 100px;
+    margin-right: 190px;
+    box-shadow: 0 0 7px #4c1224, 0 0 4px white, 0 0 6px white;
+}
+
+.boxlogin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.boxlogin input {
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    height: 58px;
+    border: #4c1224 1px solid;
+    padding-left: 16px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+
+}
+
+.boxlogin input:focus {
+    border: 2px solid rgba(140, 110, 110, 0.3);
+}
+
+.boxlogin input::placeholder {
+    color: #c29999fc;
+}
+
+.boxlogin .logar {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    background-color: #9f7878fc;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxlogin .logar:hover {
+    background-color: #573f55;
+    text-decoration: none;
+
+}
+
+.boxlogin .logar:focus {
+    opacity: .8;
+}
+
+.boxlogin .divisao {
+    display: block;
+    height: 2px;
+    width: 80%;
+    background-color: #423131fc;
+    margin-top: 32px;
+    opacity: .2;
+}
+
+.boxlogin a {
+    font-size: 18px;
+    color: #4a3d3d;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+}
+
+.boxlogin a:hover {
+    text-decoration: underline;
+}
+
+.boxlogin .title {
+    color: #704747ee;
+    font-size: 30px;
+
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul a img:hover {
+    scale: 1.1;
+    opacity: .9;
+}
+
+.logo {
+    display: none;
+}
+
+.icone {
+    margin: 10px;
+}
+
+.icone img {
+    width: 25px;
+}
+
+#btnGenerator {
+    width: 200px;
+    padding: 18px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    background: linear-gradient(150deg, #7b4949fc 50%, #948c8cfc 50%);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#btnGenerator:focus {
+    background: linear-gradient(150deg, #573f55 50%, #d597bd 50%);
+}
+
+@media (max-width:1200px) {
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(90deg, #f3e3e3 50%, #d3acacfc 50%);
+        overflow: scroll;
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boxlogin {
+        margin-left: 190px;
+        height: 80vh;
+        width: 95vw;
+        margin-top: 60px;
+    }
+
+    .videoapresentacao {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, #7b5c5c, #c1859e, #8b2974, #cf316b);
+        background-size: 400% 100%;
+        animation: degrade 10s linear infinite alternate;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes degrade {
+        0% {
+            background-position: 0%;
+        }
+
+        100% {
+            background-position: 400%;
+        }
+
+    }
+}
