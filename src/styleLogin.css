@@ -175,13 +175,13 @@ ul a img:hover {
     border-radius: 10px;
     border: none;
     font-size: 15px;
-    background: linear-gradient(150deg, #7b4949fc 50%, #948c8cfc 50%);
+    background: linear-gradient(90deg, #7b4949fc 50%, #948c8cfc 50%);
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
 #btnGenerator:focus {
-    background: linear-gradient(150deg, #573f55 50%, #d597bd 50%);
+    background: linear-gradient(90deg,#948c8cfc 50%, #7b4949fc 50%);
 }
 
 @media (max-width:1200px) {

@@ -1,18 +1,16 @@
-
 const btnGenerator = document.getElementById('btnGenerator');
 
 btnGenerator.addEventListener('click', () => {
-  const hexNumber = '0123456789ABCDEF';
-  let hexCod1 = "";
-  let hexCod2 = "";
+  const colors = ['#BDA897', '#FFDECC', '#A3CC88', '#D6B098', '#CC9870','#756E80','#B9AECA','#89757F','#C9ADBB','#FFC2C7','#D19FA3','#D6C097']; 
+  const randomIndex1 = Math.floor(Math.random() * colors.length);
+  let randomIndex2 = Math.floor(Math.random() * colors.length);
 
-  for (let i = 0;  i < 6; i++)   {
-          hexCod1 += hexNumber[Math.floor(Math.random()* hexNumber.length)];
-          hexCod2 += hexNumber[Math.floor(Math.random()* hexNumber.length)];
+  while (randomIndex2 === randomIndex1) {
+    randomIndex2 = Math.floor(Math.random() * colors.length);
   }
 
-  document.body.style.background = `linear-gradient(90deg, #${hexCod1} 50%, #${hexCod2} 50%)`
+  const color1 = colors[randomIndex1];
+  const color2 = colors[randomIndex2];
 
-
-     
-})
+  document.body.style.background = `linear-gradient(90deg, ${color1} 50%, ${color2} 50%)`;
+});
