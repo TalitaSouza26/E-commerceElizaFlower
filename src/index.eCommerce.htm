@@ -1,70 +1,281 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./style.css">
-    
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <title>BEM VINDO</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./menulateral.js" defer></script>
 
-    <title>BEM VINDO</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navBar">
-            <div class="menuMobile">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <a class="logo" href="#">
-                <p>Eliza Flower.</p>
-            </a>
-            <ul class="navLinks">
-                <li><a href="#" class="namelink">Inicio</a></li>
-                <li><a href="#" class="namelink">Contato</a></li>
-                <li><a href="#" class="namelink">Quem somos</a></li>
-                <li><a href="#" class="namelink">Conta</a></li>
-
-                <div class="icons">
-                    <a href="#" class="icones"><i class='bx bxs-cart' style='color:#964c6a'></i><span class="hover-word">Carrinho</span></a>
-                    <a href="#" class="icones"><i class='bx bxs-plane-take-off' style='color:#964c6a'></i><span class="hover-word">Envios</span></a>
-                    <a href="#" class="icones"><i class='bx bxs-heart' style='color:#964c6a'></i><span
-                            class="hover-word">Favoritos</span></a>
-                </div>
-            </ul>
-        </nav>
-    </header>
-    <div class="pages">
-        <section class="page1">
-            <h1>Pagina 1</h1>
-        </section>
-        <section class="page2">
-            <h1>Pagina 2</h1>
-        </section>
-        <section class="page3">
-            <h1>Pagina 3</h1>
-        </section>
-        <section class="page4">
-            <h1>Pagina 4</h1>
-        </section>
-        <section class="page5">
-            <h1>Pagina 5</h1>
-        </section>
+  <nav>
+    <div class="sidebar-header">
+      <a class="logo-wrapper">
+        <img src="./Assetes/coração.jpg" alt="Logo">
+      </a>
+      <button class="toggle-btn">
+        <img src="./Assetes/bxs-chevrons-right.svg" alt="expand button">
+      </button>
     </div>
-    <script src="./script.js"></script>
+
+    <a class="link">
+      <img src="./Assetes/bx-search-alt.svg" alt="">
+      <input class="procurar" type="text" placeholder="Digite aqui">
+    </a>
+
+    <div class="sidebar-links">
+      <a class="link active" href="./index.eCommerce.htm">
+        <img src="./Assetes/bxs-home.svg" alt="">
+        <span class="hidden">
+          Início</span>
+      </a>
+      <a class="link" href="/index.html">
+        <img src="./Assetes/bxs-user.svg" alt="">
+        <span class="hidden">Conta</span>
+      </a>
+      <a class="link">
+        <img src="./Assetes/bxs-shopping-bags.svg" alt="">
+        <span class="hidden">Produtos</span>
+
+      </a>
+      </li>
+      <a class="link">
+        <img src="./Assetes/bxs-hot.svg" alt="">
+        <span class="hidden">Promoções</span>
+      </a>
+
+    </div>
+
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-links">
+        <a class="link">
+          <img src="./Assetes/bx-cog.svg" alt="">
+          <span class="hidden">Contigurações</span>
+        </a>
+        <a class="link">
+          <img src="./Assetes/bx-log-out.svg" alt="">
+          <span class="hidden">Sair</span>
+        </a>
+      </div>
+
+      <div class="user-profile">
+        <div class="user-avatar">
+          <img src="./Assetes/IMG_20230318_193210_632.jpg" alt="">
+        </div>
+        <div class="user-details hidden">
+          <p class="username">Talita Souza</p>
+          <p class="user-email">talitasouzactt@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <header>
+    <p class="nameLogo">ELIZA FLOWER</p>
+    <div class="dropdown">
+      <ul classe"item">
+        <li classe"item-buque"><a href="">Buquê</a>
+          <ul classe"item">
+            <li classe"item-link"><a href="">Noivas</a></li>
+            <li classe"item-link"><a href="">Festas</a>
+              <ul classe"item">
+                <li classe"item-link"><a href="">Casamento</a></li>
+                <li classe"item-link"><a href="">Aniversário</a></li>
+                <li classe"item-link"><a href="">Surpresa</a></li>
+              </ul>
+            </li>
+            <li classe"item-link"><a href="">Decoração</a></li>
+          </ul>
+        </li>
+        <li classe"item-link"><a href=""><a href="">Flores</a></a>
+          <ul classe"item">
+            <li classe"item-link"><a href="">Tulipas</a></li>
+            <li classe"item-link"><a href="">Lírios</a></li>
+            <li classe"item-link"><a href="">Lótus</a></li>
+            <li classe"item-link"><a href="">Margaridas</a></li>
+            <li classe"item-link"><a href="">Girassóis</a></li>
+            <li classe"item-link"><a href="">Rosa</a></li>
+            <li class="item"> Orquídea
+              <ul class="item">
+                <li classe"item-link"><a href="">Phalaenopsis</a></li>
+                <li classe"item-link"><a href="">Paphiopedilum</a></li>
+                <li classe"item-link"><a href="">Dendrobium</a></li>
+                <li classe"item-link"><a href="">Miltonia</a></li>
+              </ul>
+            <li classe"item-link"><a href="">Gérbera</a></li>
+
+        </li>
+      </ul>
+      </li>
+      <li classe"item-link">Sobre Nós
+        <ul classe"itemtwo">
+          <li classe"item-link">Contato</li>
+          <li classe"item-link">Endereço</li>
+          <li classe"item-link">Políticas</li>
+        </ul>
+      </li>
+    </div>
+
+
+  </header>
+
+  <section class="boximg">
+    <main>
+      <div class="boxtitle" data-aos="fade-up" data-aos-duration="2000">
+        <p class="titlebox">FLORESÇA</< /p>
+      </div>
+      <div class="boxP" data-aos="fade-up" data-aos-duration="3000">
+        <p class="pBox">
+          Flores e plantas purificam o ar, ou seja, elas têm a capacidade de melhorar a qualidade do ar que você
+          respira. Elas basicamente aumentam o oxigênio, eliminando compostos orgânicos voláteis, que são componentes
+          tóxicos que vêm de tintas de parede, plástico e outros materiais que nos rodeiam. </p>
+      </div>
+      <button class="buttonP">Clique aqui</button>
+    </main>
+  </section>
+
+  <section class="containerBox">
+    <div class="boxdescricao" data-aos="fade-left" data-aos-duration="2000">
+      MAIS VENDIDOS
+    </div>
+
+    <div class="boxCard" data-aos="fade-right" data-aos-duration="2000">
+      <ul class="card">
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/Blue1.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê de rosas</p>
+          <p class="price">89.90 em até 2x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/buquess.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê misto verão</p>
+          <p class="price">65.00 em até 2x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/[fpdl.in]_bouquet-red-roses-with-red-ribbon-around-bottom_811553-429_normal.jpg" alt=""
+              class="imgCard">
+          </a>
+          <p class="legend">Buquê de rosas Paixão</p>
+          <p class="price">89.90 em até 2x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/buqueess.jpg" alt=""
+              class="imgCard">
+          </a>
+          <p class="legend">Buquê de rosas misto</p>
+          <p class="price">110.00 em até 3x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/buque0 (5).jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê de rosas Primavera</p>
+          <p class="price">90.00 em até 2x no cartão</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="boxCard"  data-aos="fade-right" data-aos-duration="2000">
+      <ul class="card">
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/BuqueColorida.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê de rosas Suave</p>
+          <p class="price">109.90 em até 2x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/[fpdl.in]_um-buque-de-rosas-esta-em-um-fundo-rosa_939491-5_normal.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê de rosas Elegance</p>
+          <p class="price">200.00 em até 3x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/roxo1.jpg" alt=""
+              class="imgCard">
+          </a>
+          <p class="legend">Buquê de rosas Amora</p>
+          <p class="price">159.90 em até 2x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/Price.jpg" alt=""
+              class="imgCard">
+          </a>
+          <p class="legend">Buquê Japonês</p>
+          <p class="price">180.00 em até 3x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/tulipa1.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê de Tulipas</p>
+          <p class="price">120.00 em até 2x no cartão</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="boxdescricao" data-aos="fade-left" data-aos-duration="2000">
+      NOVIDADES
+    </div>
+    
+    <div class="boxCard"  data-aos="fade-right" data-aos-duration="2000">
+      <ul class="card">
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/slideamarelo.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê de Flores</p>
+          <p class="price">79.90 em até 3x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/slideazul.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê de Tulipas</p>
+          <p class="price">140.00 em até 3x no cartão </p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+          <img src="./Assetes/Tulipa3.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê de Tulipas</p>
+          <p class="price">109.90 em até 2x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/tulipa2.jpg" alt=""
+              class="imgCard">
+          </a>
+          <p class="legend">Buquê de Tulipas</p>
+          <p class="price">90.00 em até 2x no cartão</p>
+        </li>
+        <li class="cards"><a href="" class="linkCard">
+            <img src="./Assetes/mão.jpg" alt="" class="imgCard">
+          </a>
+          <p class="legend">Buquê Misto</p>
+          <p class="price">105.00 em até 3x no cartão</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="./Assetes/script.js""></script>
+  <script src=" https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 
 </html>

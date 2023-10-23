@@ -1,34 +1,379 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  font-family: 'Poiret One', cursive;
   box-sizing: border-box;
+  font-family: 'Poiret One', sans-serif;
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+
+  font-weight: bold;
+  position: relative;
+
+}
+
+button,
+a {
+  all: unset;
+  font: inherit;
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  width: 5rem;
+  height: calc(100vh - 0.50rem);
+  background-color: #ffffff;
+  padding: 1rem 0.75rem;
+  border-radius: 0.45rem;
+  display: flex;
+  flex-direction: column;
+  transition: width 500ms ease;
+  border: solid 1px rgb(103, 98, 98);
+  z-index: 1;
+
+}
+
+body.active nav {
+  width: 15rem;
+}
+
+input {
+  border: none;
+  text-align: start;
+  outline: none;
+  border-radius: 20px;
+  padding: 4px;
+}
+
+input:hover {
+  background-color: #ea91973f;
+}
+
+.sidebar-header,
+.sidebar-links,
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.sidebar-header {
+  margin-bottom: 1.5rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.logo-wrapper>img {
+  width: 70%;
+  background: #f0cbcb;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar-links {
+  flex-direction: column;
+  margin-bottom: auto;
+  gap: 0.6rem;
+  padding-top: 1.5rem;
+  font-size: 15px;
+  color: #3d3839
+}
+
+nav>.sidebar-links {
+  border-top: 1px solid rgb(211, 211, 211);
+}
+
+body.active .sidebar-links,
+body.active .sidebar-header,
+body.active .user-profile {
+  justify-content: start;
+  align-items: stretch;
+
+}
+
+.link {
+  display: flex;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  gap: 1.5rem;
+}
+
+.hidden,
+.procurar {
+  display: none;
+}
+
+body.active .hidden,
+.procurar {
+  display: inline;
+}
+
+
+.link:hover,
+.link.active:hover {
+  background: #ea91973f;
+}
+
+a:focus {
+  text-decoration: underline;
+
+
+}
+
+
+.link>img {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-bottom .sidebar-links {
+  padding-bottom: 1.5rem;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -45px;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px rgb(152, 148, 148) solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease;
+
+}
+
+body.active .toggle-btn {
+  transform: rotate(180deg);
+}
+
+.user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgb(211, 211, 211);
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-avatar:hover {
+  scale: 1.1;
+}
+
+.user-details {
+  align-self: center;
   overflow: hidden;
 }
 
+.user-details .username {
+  font-size: 1rem;
+  font-weight: 600;
+}
 
-a {
-  color: #af7990;
-  text-decoration: none;
+.user-details .user-email {
+  padding-right: 12px;
+  font-size: 0.9rem;
+}
+
+header {
+  background: #f1cbcd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-size: 20px;
-  font-family: 'Nunito Sans', sans-serif;
+  padding: 10px;
 }
 
-a:hover {
-  opacity: 0.7;
+.nameLogo {
+  font-size: 35px;
+  font-weight: lighter;
+  margin-left: 40px;
+  color: #86696b;
+}
+
+.dropdown {
+  max-width: 860px;
+  cursor: pointer;
+
+}
+
+.dropdown ul {
+  list-style: none;
+  margin-top: 2%;
+
+}
+
+.dropdown ul li {
+  width: 140px;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  float: left;
+  color: #86696b;
+  background: #f1cbcd;
+  font-size: 18px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 530;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.dropdown ul li:hover {
+  background: rgba(230, 127, 146, 0.528);
 
 }
 
 
-.logo {
-  text-align: end;
-  font-size: 3rem;
-  background: linear-gradient(45deg, #964c6a, #f81b86, #5d0135, #340836);
+.dropdown ul ul {
+  display: none;
+}
+
+.dropdown ul li:hover>ul {
+  display: block;
+}
+
+.dropdown ul ul ul {
+  margin-left: 130px;
+  top: -3px;
+  position: absolute;
+
+}
+
+.boximg {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-image: url(./Assetes/01.jpg);
+  background-size: cover;
+  color: #86696b;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+
+
+}
+
+.titlebox {
+  font-size: 75px;
+}
+
+.boxP {
+  max-width: 600px;
+  font-size: 20px;
+
+
+}
+
+.buttonP {
+  text-align: center;
+  background: #f0cbcb;
+  width: 120px;
+  padding: 10px;
+  border-radius: 5%;
+  font-weight: bolder;
+  border: solid #86696b;
+}
+
+.buttonP:focus{
+  scale: 1.1
+  ;
+}
+
+
+.boxdescricao{
+  background: #f0cbcb;
+  padding: 12px;
+ }
+
+ .card{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 10px;
+  
+
+ }
+
+ .cards{
+  padding: 5px;
+  border: 2px solid #ad8a8a;
+  border-radius: 5px;
+  width: 250px;
+  margin: 28px;
+
+ }
+
+ .imgCard{
+    width: 100%;
+    border-radius: 5px;
+ }
+
+ .legend{
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #cb9d9de8;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+ }
+
+ .price{
+  color: #413d3d;
+  font-weight: bold;
+  border-radius: 3px;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
+ }
+
+
+.boxdescricao {
+  border: solid #ad8a8a 5px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(45deg ,#905b5b, #d89a9a, #654848);
   background-size: 400% 100%;
   animation: degrade 10s linear infinite alternate;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+  
 
 }
 
@@ -42,182 +387,65 @@ a:hover {
   }
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #e4d5d5fc;
-  height: 8vh;
-  padding: 45px;
+@media (max-width:700px) {
 
-}
+  header {
 
-
-
-
-.navLinks {
-  list-style: none;
-  display: flex;
-
-}
-
-.navLinks li {
-  letter-spacing: 3px;
-  margin-left: 32px;
-
-}
-
-.icons a {
-  font-size: 25px;
-  padding: 10px;
-  cursor: pointer
-}
-
-.hover-word {
-  display: none;
-}
-
-.icones:hover .hover-word {
-  display: inline;
-  font-size: 18px;
-  color: #340836;
-  padding: 5px;
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-.icons {
-  margin-left: 100px;
-
-}
-
-.menuMobile {
-  cursor: pointer;
-  display: none;
-}
-
-.menuMobile div {
-  width: 32px;
-  height: 2px;
-  background: rgb(72, 64, 64);
-  margin: 8px;
-}
-
-.pages {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
-
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  height: 100vh;
-  scroll-snap-align: start;
-  position: sticky;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-
-}
-
-
-.page1 {
-  background-color: #d68cb0;
-}
-
-.page2 {
-  background-color: #340836;
-}
-
-.page3 {
-  background-color: #964c6a;
-}
-
-.page4 {
-  background-color: darkorchid;
-}
-
-.page5 {
-  background-color: #5b1835;
-}
-
-@media (max-width:999px) {
-
-
-
-  .navLinks {
     display: none;
-    position: absolute;
-    top: 90px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding-top: 50px;
-    background-image: url(./Assetes/20230921020727_[fpdl.in]_hand-holding-elegant-flower_23-2149376504_normal.jpg);
-    background-color: rgb(248, 246, 247);
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    z-index: 1;
-    width: 100%;
-
   }
 
-  .navLlinks li {
-    opacity: 0;
+  .sidebar-links {
+    overflow: scroll;
   }
 
-  .navLinks a {
-    color: #4d1b2f;
-    font-size: 1rem;
-    font-weight: bolder;
-    font-weight: 800;
-    background-color: rgb(248, 246, 247, .40);
-    padding: 10px;
-    border-radius: 5px;
+  .boximg{
+    background-image: url(./Assetes/natural-smiling-woman-with-bouquet-fresh-tulips.jpg);
   }
 
+ .boxtitle, .boxP{
+  display: none;
+  
+ }
 
-  .namelink {
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+ .buttonP{
+  margin-left: 50px;
+  margin-top: 120px;
+  font-size: 22px;
+ }
+
+
+ h1{
+   font-size: 20px;
+   margin-left: 80px;
+ }
+
+  
+
+ .boxCard {
+  overflow: scroll;
+  display: flex;
+  margin-left: 60px;
   }
 
-  .menuMobile {
-    display: block;
-
+  .cards{
+    width: 180px;
+   
   }
+   
 
-  .navLinks.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
-    justify-content: start;
 
-  }
 
-  .logo {
-    font-size: 30px;
 
-  }
 
-  .icons {
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
 
-  }
 
-  .icons a {
-    font-size: 30px;
-    letter-spacing: 10px;
 
-  }
+
+
+
+
+
+
+
 
 }
