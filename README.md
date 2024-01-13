@@ -19,4 +19,4 @@ https://talitasouza26.github.io/E-commerceElizaFlower/
 ![flower](https://github.com/TalitaSouza26/E-commerceElizaFlower/assets/136650770/869d01fa-fc40-49a3-85cb-d3069e9b0f60)
 
 
-![flowe23,](https://github.com/TalitaSouza26/E-commerceElizaFlower/assets/136650770/22f984ac-8f3c-47a3-a728-aa8ecc68a820)
+![flowe23,](https://github.com/TalitaSouza26/E-commerceElizaFlower/assets/136650770/12369dcd-349b-488e-9af9-68779092f57b)
